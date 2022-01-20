@@ -9,40 +9,40 @@
     },
     {
         "id": 2,
-        "img": "https://i.postimg.cc/T2r0H1Wh/Astro-Dev-Curso-1-1.gif",
-        "gif": "",
+        "img": "https://i.postimg.cc/Y07rCfgm/4.png",
+        "gif": "https://i.postimg.cc/T2r0H1Wh/Astro-Dev-Curso-1-1.gif",
         "titulo": "Camiseta AstroDev",
         "descricao": "roxo{Dev}",
         "preco": "120"
     },
     {
         "id": 3,
-        "img": "https://i.postimg.cc/PJgkxxTC/Astro-Dev-Curso-1-2.gif",
-        "gif": "",
+        "img": "https://i.postimg.cc/HspWGzdq/7.png",
+        "gif": "https://i.postimg.cc/PJgkxxTC/Astro-Dev-Curso-1-2.gif",
         "titulo": "Hoodie AstroCode",
         "descricao": "Marrom",
         "preco": "200"
     },
     {
         "id": 4,
-        "img": "https://i.postimg.cc/bJFh7g5H/Astro-Dev-Curso-1-3.gif",
-        "gif": "",
+        "img": "https://i.postimg.cc/qvFp3dyr/10.png",
+        "gif": "https://i.postimg.cc/bJFh7g5H/Astro-Dev-Curso-1-3.gif",
         "titulo": "Moletom AstroCode",
         "descricao": "Verde Musgo",
         "preco": "180"
     },
     {
         "id": 5,
-        "img": "https://i.postimg.cc/HsMgNQ9X/Astro-Dev-Curso-1-4.gif",
-        "gif": "",
+        "img": "https://i.postimg.cc/vBrykgj8/13.png",
+        "gif": "https://i.postimg.cc/HsMgNQ9X/Astro-Dev-Curso-1-4.gif",
         "titulo": "Camiseta AstroDev",
         "descricao": "Preto",
         "preco": "120"
     },
     {
         "id": 6,
-        "img": "https://i.postimg.cc/prjzs7w5/Astro-Dev-Curso-1-512-x-512-px.gif",
-        "gif": "",
+        "img": "https://i.postimg.cc/7PNDNz0m/19.png",
+        "gif": "https://i.postimg.cc/prjzs7w5/Astro-Dev-Curso-1-512-x-512-px.gif",
         "titulo": "Hoodie AstroCode",
         "descricao": "Azul",
         "preco": "200"
