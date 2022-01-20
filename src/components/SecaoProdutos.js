@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { CardProduto } from "./CardProduto";
+import productList from "../data/produtos.json"
 
 const ContainerSecao = styled.div`
     display: flex;
@@ -28,15 +29,15 @@ const ContainerProdutos = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 15px;
-    @media screen and (max-width: 1080px){
+    @media screen and (max-width: 1250px){
         grid-template-columns: repeat(3, 1fr);
 
     }
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 950px){
         grid-template-columns: repeat(2, 1fr);
 
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 650px){
         display: flex;
         flex-direction: column;
     }
@@ -45,49 +46,27 @@ const ContainerProdutos = styled.div`
 export class SecaoProdutos extends React.Component{
     
     state = {
-        produtos: [{
-            id: 1,
-            img: "https://i.postimg.cc/2jHGzHqj/Design-sem-nome-9.png",
-            titulo: "Moletom AstroCode",
-            descricao: "roxo{Dev}",
-            preco: "200"
-        },
-        {
-            id: 2,
-            img: "https://i.postimg.cc/3xMQ2LLQ/10.png",
-            titulo: "Caneca Foguete Retrô",
-            descricao: "Azul",
-            preco: "80"
-        },
-        {
-            id: 3,
-            img: "https://i.postimg.cc/h45Bt4Tj/11.png",
-            titulo: "Caneca Foguete",
-            descricao: "Preta",
-            preco: "70"
-        },
-        {
-            id: 4,
-            img: "https://i.postimg.cc/Kv3ykXD5/9.png",
-            titulo: "Caneca Foguete",
-            descricao: "roxo{Dev}",
-            preco: "70"
-        },
-        {
-            id: 4,
-            img: "https://i.postimg.cc/Kv3ykXD5/9.png",
-            titulo: "Caneca Foguete",
-            descricao: "roxo{Dev}",
-            preco: "70"
-        }]
+        produtos: productList,
+        order: "descrescente",
     }
 
     render() {
 
         let numProdutos = this.state.produtos.length
 
-        let todosProdutos = this.state.produtos.map((produto) => {
-            return <CardProduto key={produto.id} img={produto.img} titulo={produto.titulo} descricao={produto.descricao} preco={produto.preco}/>
+        let todosProdutos = this.state.produtos
+        .sort((a, b) => {
+            if (this.state.order === "crescente") return a.preco - b.preco
+            else return b.preco - a.preco
+        })
+        .map((produto) => {
+            return <CardProduto 
+            key={produto.id} 
+            img={produto.img} 
+            gif={produto.gif}
+            titulo={produto.titulo} 
+            descricao={produto.descricao} 
+            preco={produto.preco}/>
         })
 
 
@@ -97,9 +76,12 @@ export class SecaoProdutos extends React.Component{
                 <p>Total de Produtos: {numProdutos}</p>
                 <div>
                     <p>Ordenar</p>
-                    <select name="ordena" id="ordena-produtos">
-                        <option value="crescente">Crescente</option>
-                        <option value="decrescente">Decrescente</option>
+                    <select name="ordena" 
+                    id="ordena-produtos" 
+                    onChange={(e) => {this.setState({order: e.target.value})}}
+                    >
+                        <option value="decrescente">Mais caro</option>
+                        <option value="crescente">Mais barato</option>
                     </select>
                     </div>
             </ContainerHeader>

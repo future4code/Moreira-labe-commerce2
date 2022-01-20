@@ -5,7 +5,7 @@ const ProdutoContainer = styled.div`
     border: 1px solid lightgrey;
     border-radius: 10px;
     transition: 0.3s ease;
-    width: 250px;
+    width: 290px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -15,10 +15,18 @@ const ProdutoContainer = styled.div`
     box-sizing: border-box;
     :hover{
         box-shadow: 0px 2px 4px gray;
+        .stactic{
+            display: none;
+        }
+        .animated{
+            display: block;
+        }
     }
     img{
-        width: 270px;
-        transition: 1s ease;
+        width: 100%;
+    }
+    .animated{
+        display: none;
     }
     .titulo{
         font-size: medium;
@@ -43,6 +51,7 @@ const ProdutoContainer = styled.div`
         align-self: center;
         padding: 10px;
         font-size: 0.8em;
+        cursor: pointer;
         :hover{
             background-color: #8931b4;
         }
@@ -65,7 +74,8 @@ export class CardProduto extends React.Component{
     render() {
 
         return <ProdutoContainer>
-            <img src={this.props.img} alt="Foto do Produto" />
+            <img className="stactic" src={this.props.img} alt="Foto do Produto" />
+            <img className="animated" src={this.props.gif} alt="Foto do Produto" />
             <p className="titulo">{this.props.titulo}</p>
             <p className="descricao">{this.props.descricao}</p>
             <div>
