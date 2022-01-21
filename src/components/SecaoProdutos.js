@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { CardProduto } from "./CardProduto";
-import productList from "../data/produtos.json"
 
 const ContainerSecao = styled.div`
     display: flex;
@@ -45,18 +44,14 @@ const ContainerProdutos = styled.div`
 
 export class SecaoProdutos extends React.Component{
     
-    state = {
-        produtos: productList,
-        order: "descrescente",
-    }
 
     render() {
 
-        let numProdutos = this.state.produtos.length
+        let numProdutos = this.props.produtos.length
 
-        let todosProdutos = this.state.produtos
+        let todosProdutos = this.props.produtos
         .sort((a, b) => {
-            if (this.state.order === "crescente") return a.preco - b.preco
+            if (this.props.order === "crescente") return a.preco - b.preco
             else return b.preco - a.preco
         })
         .map((produto) => {

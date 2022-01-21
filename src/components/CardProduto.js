@@ -72,7 +72,6 @@ const ProdutoContainer = styled.div`
 export class CardProduto extends React.Component{
     
     render() {
-
         return <ProdutoContainer>
             <img className="stactic" src={this.props.img} alt="Foto do Produto" />
             <img className="animated" src={this.props.gif} alt="Foto do Produto" />
