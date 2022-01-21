@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import  { Carrinho } from './components/Carrinho.js'
 import styled from 'styled-components'
+import { SecaoProdutos } from './components/SecaoProdutos';
+import productList from "./data/produtos.json"
 
 const ContainerCarrinho = styled.div`
 width: 70vw;
@@ -9,6 +11,8 @@ width: 70vw;
 class App extends React.Component {
   
   state={ 
+    produtos: productList,
+    
     carrinho:[{
       produto:"xicara",
       quantidade: 6,
@@ -18,8 +22,9 @@ class App extends React.Component {
     { produto:"camiseta",
     quantidade: 2,
     valor: 50,}] , 
+    valorTotal:"",
     
-    valorTotal:"" ,
+    order: "descrescente",
   }
   
   CalculaValor = ()=>{
@@ -38,11 +43,14 @@ class App extends React.Component {
   }
 
   render(){
-    // se fosse dentro do render a função colocaria o const 
+
     
     
     return (
       <div className="App">
+        <SecaoProdutos 
+          produtos={this.state.produtos} 
+          order={this.state.order}/>
         <ContainerCarrinho/>
         <Carrinho produtosCarrinho={this.state.carrinho} valorTotal={this.state.valorTotal}/>
         

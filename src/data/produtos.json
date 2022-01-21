@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.postimg.cc/2jHGzHqj/Design-sem-nome-9.png",
+        "gif": "https://i.postimg.cc/vBfGRfW4/Astro-Dev-Curso-1.gif",
+        "titulo": "Hoodie AstroCode",
+        "descricao": "roxo{Dev}",
+        "preco": "200"
+    },
+    {
+        "id": 2,
+        "img": "https://i.postimg.cc/Y07rCfgm/4.png",
+        "gif": "https://i.postimg.cc/T2r0H1Wh/Astro-Dev-Curso-1-1.gif",
+        "titulo": "Camiseta AstroDev",
+        "descricao": "roxo{Dev}",
+        "preco": "120"
+    },
+    {
+        "id": 3,
+        "img": "https://i.postimg.cc/HspWGzdq/7.png",
+        "gif": "https://i.postimg.cc/PJgkxxTC/Astro-Dev-Curso-1-2.gif",
+        "titulo": "Hoodie AstroCode",
+        "descricao": "Marrom",
+        "preco": "200"
+    },
+    {
+        "id": 4,
+        "img": "https://i.postimg.cc/qvFp3dyr/10.png",
+        "gif": "https://i.postimg.cc/bJFh7g5H/Astro-Dev-Curso-1-3.gif",
+        "titulo": "Moletom AstroCode",
+        "descricao": "Verde Musgo",
+        "preco": "180"
+    },
+    {
+        "id": 5,
+        "img": "https://i.postimg.cc/vBrykgj8/13.png",
+        "gif": "https://i.postimg.cc/HsMgNQ9X/Astro-Dev-Curso-1-4.gif",
+        "titulo": "Camiseta AstroDev",
+        "descricao": "Preto",
+        "preco": "120"
+    },
+    {
+        "id": 6,
+        "img": "https://i.postimg.cc/7PNDNz0m/19.png",
+        "gif": "https://i.postimg.cc/prjzs7w5/Astro-Dev-Curso-1-512-x-512-px.gif",
+        "titulo": "Hoodie AstroCode",
+        "descricao": "Azul",
+        "preco": "200"
+    },
+    {
+        "id": 7,
+        "img": "https://i.postimg.cc/3xMQ2LLQ/10.png",
+        "gif": "https://i.postimg.cc/3xMQ2LLQ/10.png",
+        "titulo": "Caneca Foguete Retrô",
+        "descricao": "Azul",
+        "preco": "60"
+    },
+    {
+        "id": 8,
+        "img": "https://i.postimg.cc/h45Bt4Tj/11.png",
+        "gif": "https://i.postimg.cc/h45Bt4Tj/11.png",
+        "titulo": "Caneca Foguete",
+        "descricao": "Preta",
+        "preco": "50"
+    },
+    {
+        "id": 9,
+        "img": "https://i.postimg.cc/Kv3ykXD5/9.png",
+        "gif": "https://i.postimg.cc/Kv3ykXD5/9.png",
+        "titulo": "Caneca Foguete",
+        "descricao": "roxo{Dev}",
+        "preco": "50"
+    }
+]
