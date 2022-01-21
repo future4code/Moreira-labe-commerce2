@@ -9,7 +9,12 @@ const Container = styled.header`
     padding: 5px 20px;
     img{
         width: 45px;
-        margin-left: 5px;
+        margin: 0 5px;
+    }
+    div{
+        display: flex;
+        color: white;
+        font-weight: bold;
     }
     button{
         display: flex;
@@ -46,6 +51,7 @@ export function SiteHeader(){
             <div>
                 <img src='https://i.postimg.cc/YqkMpSkG/APlicativo-celular-512-x-512-px-1.png' alt='logo AstroDev'/>
                 <img src='https://i.postimg.cc/C5WgpFF7/APlicativo-celular-512-x-512-px-4.png' alt='logo AstroDev'/>
+                <p>STORE</p>
             </div>
             <button>Login</button>
         </Container>

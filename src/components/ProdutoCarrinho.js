@@ -14,6 +14,7 @@ button{
     margin: 5px;
     margin-right: 15px;
     width: fit-content;
+    cursor: pointer;
 }
 p{
     font-weight: bold;
@@ -40,7 +41,7 @@ export class ProdutoCarrinho extends React.Component {
 
             <p className="descricao">{this.props.descricao}</p>
              
-            <button onClick={this.props.onClickButton}>Remover</button>
+            <button value={this.props.value} onClick={this.props.onClick}>Remover</button>
            
         </ContainerFlex>
         )

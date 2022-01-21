@@ -39,6 +39,8 @@ export class Carrinho extends React.Component{
         titulo={produto.titulo}
         descricao={produto.descricao}
         key={produto.id}
+        onClick={this.props.onClick}
+        value={produto.id}
         />
       })
     
@@ -46,7 +48,7 @@ export class Carrinho extends React.Component{
      return (
          <Container>
           <h3>
-              <img src="http://www.clker.com/cliparts/U/D/n/G/6/h/white-shopping-cart-md.png"/>
+              <img src="http://www.clker.com/cliparts/U/D/n/G/6/h/white-shopping-cart-md.png" alt="carrinho"/>
               Carrinho</h3>
             {carrinhoProdutos}
          <p>Valor Total: R${this.props.valorTotal}</p>

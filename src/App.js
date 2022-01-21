@@ -28,26 +28,27 @@ class App extends React.Component {
   
 
   adicionaCarrinho = (e) => {
-    const produtoId = e.target.value
+    const produtoId = Number(e.target.value)
 
     const produtoExisteCarrinho = this.state.carrinho.find(
-      (produto) => produtoId == produto.id,
+      (produto) => produtoId === produto.id,
     )
     if (produtoExisteCarrinho) {
       const novoCarrinho = this.state.carrinho.map((produto) =>
-        produtoId == produto.id ? { ...produto, quantidade: produto.quantidade + 1 } : produto,
+        produtoId === produto.id ? { ...produto, quantidade: produto.quantidade + 1 } : produto,
       )
       this.setState({
         carrinho: novoCarrinho,
       })
     } else {
-      const novoProduto = this.state.produtos.find((produto) => produtoId == produto.id);
+      const novoProduto = this.state.produtos.find((produto) => produtoId === produto.id);
       const novoCarrinho = [ ...this.state.carrinho, novoProduto]
       this.setState({
         carrinho: novoCarrinho,
       })
     }
   };
+
 
   render(){
     
@@ -68,6 +69,7 @@ class App extends React.Component {
           <Carrinho 
           produtosCarrinho={this.state.carrinho} 
           valorTotal={valorTotal}
+          onClick={this.removeCarrinho}
           />
       </AppContainer>
       </>
