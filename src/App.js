@@ -1,20 +1,28 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
 import  { Carrinho } from './components/Carrinho.js'
 import { SecaoProdutos } from './components/SecaoProdutos';
+import { SiteHeader } from './components/SiteHeader.js';
 import productList from "./data/produtos.json"
 
+const AppContainer = styled.div `
+  text-align: center;
+  display:flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  @media screen and (max-width: 650px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  }
+`
 
 class App extends React.Component {
   
   state={ 
     produtos: productList,
-    
-    carrinho:[
-    ], 
-
-    valorTotal:"",
-    
+    carrinho:[],
     order: "descrescente",
   }
   
@@ -39,22 +47,17 @@ class App extends React.Component {
         carrinho: novoCarrinho,
       })
     }
-    this.CalculaValor()
   };
-
-  CalculaValor = ()=>{
-
-    const valor = this.state.carrinho
-      .map((produto)=>{return produto.quantidade * produto.preco})
-      .reduce((prev, curr) => prev + curr, 0)
-      
-    this.setState({valorTotal: valor})     
-  }
 
   render(){
     
-    return (
-      <div className="App">
+    let valorTotal = this.state.carrinho
+    .map((produto)=>{return produto.quantidade * produto.preco})
+    .reduce((prev, curr) => prev + curr, 0)
+
+    return (<>
+      <SiteHeader/>
+      <AppContainer>
         <SecaoProdutos 
           produtos={this.state.produtos} 
           order={this.state.order}
@@ -64,9 +67,10 @@ class App extends React.Component {
         
           <Carrinho 
           produtosCarrinho={this.state.carrinho} 
-          valorTotal={this.state.valorTotal}
+          valorTotal={valorTotal}
           />
-      </div>
+      </AppContainer>
+      </>
     );
   }
   }

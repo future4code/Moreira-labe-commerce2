@@ -4,7 +4,8 @@ import { ProdutoCarrinho } from "./ProdutoCarrinho"
 
 const Container = styled.div`
 margin: 15px;
-width: 25%;
+min-width: 25%;
+width: fit-content;
 border-radius: 15px;
 display: flex;
 flex-direction:column ;
@@ -15,7 +16,12 @@ background-color: #371a48;
 color: white;
 box-shadow: 0px 5px 15px gray;
     p, h3{
-        margin: 5px;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    img{
+        width: 20px;
+        margin-right: 5px;
     }
 `
 
@@ -39,9 +45,11 @@ export class Carrinho extends React.Component{
     
      return (
          <Container>
-          <h3>Carrinho</h3>
+          <h3>
+              <img src="http://www.clker.com/cliparts/U/D/n/G/6/h/white-shopping-cart-md.png"/>
+              Carrinho</h3>
             {carrinhoProdutos}
-         <p>Valor Total: {this.props.valorTotal}</p>
+         <p>Valor Total: R${this.props.valorTotal}</p>
            
          </Container>
      
