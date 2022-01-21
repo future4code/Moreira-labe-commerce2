@@ -5,7 +5,7 @@ const ProdutoContainer = styled.div`
     border: 1px solid lightgrey;
     border-radius: 10px;
     transition: 0.3s ease;
-    width: 290px;
+    width: 80%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,8 @@ const ProdutoContainer = styled.div`
         font-size: 1.1em;
     }
     button{
+        display: flex;
+        align-items: center;
         border: 1px solid;
         border-radius: 10px;
         background-color: #69268a;
@@ -52,6 +54,15 @@ const ProdutoContainer = styled.div`
         padding: 10px;
         font-size: 0.8em;
         cursor: pointer;
+        img {
+            width: 20px;
+        }
+        p {
+            margin: 0;
+            margin-right: 5px;
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
         :hover{
             background-color: #8931b4;
         }
@@ -72,6 +83,7 @@ const ProdutoContainer = styled.div`
 export class CardProduto extends React.Component{
     
     render() {
+
         return <ProdutoContainer>
             <img className="stactic" src={this.props.img} alt="Foto do Produto" />
             <img className="animated" src={this.props.gif} alt="Foto do Produto" />
@@ -79,7 +91,9 @@ export class CardProduto extends React.Component{
             <p className="descricao">{this.props.descricao}</p>
             <div>
             <p className="preco">{`R$${this.props.preco}`}</p>
-            <button>Adicionar ao Carrinho</button>
+            <button value={this.props.produtoId} onClick={this.props.onClick}>
+                + Carrinho
+                </button>
             </div>
             </ProdutoContainer>
     }
