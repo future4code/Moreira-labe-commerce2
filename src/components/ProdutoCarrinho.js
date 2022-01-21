@@ -11,10 +11,14 @@ align-items: center;
 width: 99%;
 padding: 5px;
 button{
-        margin-right: 10px;
-    }
+    margin: 5px;
+    margin-right: 15px;
+    width: fit-content;
+}
 p{
     font-weight: bold;
+    font-size: 0.8em;
+    margin: 0;
 }
 .descricao{
     color: lightgrey;

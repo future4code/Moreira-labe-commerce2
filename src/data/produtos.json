@@ -4,7 +4,7 @@
         "img": "https://i.postimg.cc/2jHGzHqj/Design-sem-nome-9.png",
         "gif": "https://i.postimg.cc/vBfGRfW4/Astro-Dev-Curso-1.gif",
         "titulo": "Hoodie AstroCode",
-        "descricao": "roxo{Dev}",
+        "descricao": "Roxo",
         "preco": "200",
         "quantidade": 1
     },
@@ -13,7 +13,7 @@
         "img": "https://i.postimg.cc/Y07rCfgm/4.png",
         "gif": "https://i.postimg.cc/T2r0H1Wh/Astro-Dev-Curso-1-1.gif",
         "titulo": "Camiseta AstroDev",
-        "descricao": "roxo{Dev}",
+        "descricao": "Roxo",
         "preco": "120",
         "quantidade": 1
     },
@@ -75,7 +75,7 @@
         "img": "https://i.postimg.cc/Kv3ykXD5/9.png",
         "gif": "https://i.postimg.cc/Kv3ykXD5/9.png",
         "titulo": "Caneca Foguete",
-        "descricao": "roxo{Dev}",
+        "descricao": "Roxo",
         "preco": "50",
         "quantidade": 1    }
 ]
