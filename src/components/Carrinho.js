@@ -2,46 +2,46 @@ import React from "react"
 import styled from "styled-components"
 import { ProdutoCarrinho } from "./ProdutoCarrinho"
 
-
 const Container = styled.div`
-border: 1px solid green ;
+margin: 15px;
+width: 25%;
+border-radius: 15px;
 display: flex;
 flex-direction:column ;
 justify-content: space-between;
 align-items:flex-start;
-p,h1{
-    margin:5px;
-}
+height: fit-content;
+background-color: #371a48;
+color: white;
+box-shadow: 0px 5px 15px gray;
+    p, h3{
+        margin: 5px;
+    }
 `
 
-
-
-
-
-
-
-
 export class Carrinho extends React.Component{
-   // aqui seria colocado as funções ,mas agora são no exopo classe render
-   //chamamos com this
-   
-   //render roda toda vez que o estado é  atualizado
-   
-   // state
+
    render (){
-    const carrinhoProdutos=this.props.produtosCarrinho.map((produto)=>{
+       
+
+
+    const carrinhoProdutos = this.props.produtosCarrinho.map((produto)=>{
       
         return <ProdutoCarrinho
+        id={produto.id}
         quantidade={produto.quantidade}
-        produto={produto.produto}
+        titulo={produto.titulo}
+        descricao={produto.descricao}
+        key={produto.id}
         />
       })
     
+    
      return (
          <Container>
-          <h1>Carrinho</h1>
+          <h3>Carrinho</h3>
             {carrinhoProdutos}
-         <p>{this.props.valorTotal}</p>
+         <p>Valor Total: {this.props.valorTotal}</p>
            
          </Container>
      

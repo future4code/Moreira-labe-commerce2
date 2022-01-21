@@ -1,65 +1,74 @@
 import React from 'react';
 import './App.css';
 import  { Carrinho } from './components/Carrinho.js'
-import styled from 'styled-components'
 import { SecaoProdutos } from './components/SecaoProdutos';
 import productList from "./data/produtos.json"
 
-const ContainerCarrinho = styled.div`
-width: 70vw;
-`
+
 class App extends React.Component {
   
   state={ 
     produtos: productList,
     
-    carrinho:[{
-      produto:"xicara",
-      quantidade: 6,
-      valor: 50,
-    },
-    
-    { produto:"camiseta",
-    quantidade: 2,
-    valor: 50,}] , 
+    carrinho:[
+    ], 
+
     valorTotal:"",
     
     order: "descrescente",
   }
   
-  CalculaValor = ()=>{
-    const valor= this.state.carrinho.map((produto)=>{
-      return produto.quantidade * produto.valor
-    }).reduce((prev, curr) => prev + curr, 0);
-    
-    
 
-    this.setState({valorTotal: valor})
-           
-  }
+  adicionaCarrinho = (e) => {
+    const produtoId = e.target.value
 
-  componentDidMount(){
+    const produtoExisteCarrinho = this.state.carrinho.find(
+      (produto) => produtoId == produto.id,
+    )
+    if (produtoExisteCarrinho) {
+      const novoCarrinho = this.state.carrinho.map((produto) =>
+        produtoId == produto.id ? { ...produto, quantidade: produto.quantidade + 1 } : produto,
+      )
+      this.setState({
+        carrinho: novoCarrinho,
+      })
+    } else {
+      const novoProduto = this.state.produtos.find((produto) => produtoId == produto.id);
+      const novoCarrinho = [ ...this.state.carrinho, novoProduto]
+      this.setState({
+        carrinho: novoCarrinho,
+      })
+    }
     this.CalculaValor()
+  };
+
+  CalculaValor = ()=>{
+
+    const valor = this.state.carrinho
+      .map((produto)=>{return produto.quantidade * produto.preco})
+      .reduce((prev, curr) => prev + curr, 0)
+      
+    this.setState({valorTotal: valor})     
   }
 
   render(){
-
-    
     
     return (
       <div className="App">
         <SecaoProdutos 
           produtos={this.state.produtos} 
-          order={this.state.order}/>
-        <ContainerCarrinho/>
-        <Carrinho produtosCarrinho={this.state.carrinho} valorTotal={this.state.valorTotal}/>
+          order={this.state.order}
+          onChange={(e) => {this.setState({order: e.target.value})}}
+          onClick={this.adicionaCarrinho}
+          />
         
-        
+          <Carrinho 
+          produtosCarrinho={this.state.carrinho} 
+          valorTotal={this.state.valorTotal}
+          />
       </div>
     );
   }
-  
-
   }
 
   

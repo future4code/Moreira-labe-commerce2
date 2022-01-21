@@ -7,6 +7,7 @@ const ContainerSecao = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 70%;
 `
 
 const ContainerHeader = styled.div`
@@ -14,7 +15,7 @@ const ContainerHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    width: 80%;
+    width: 60%;
     p{
         margin: 5px;
     }
@@ -25,7 +26,8 @@ const ContainerHeader = styled.div`
 `
 
 const ContainerProdutos = styled.div`
-    display: grid;
+    display: grid; 
+    align-content: center;
     grid-template-columns: repeat(4, 1fr);
     padding: 15px;
     @media screen and (max-width: 1250px){
@@ -56,12 +58,14 @@ export class SecaoProdutos extends React.Component{
         })
         .map((produto) => {
             return <CardProduto 
-            key={produto.id} 
+            key={produto.id}
+            produtoId={produto.id}
             img={produto.img} 
             gif={produto.gif}
             titulo={produto.titulo} 
             descricao={produto.descricao} 
-            preco={produto.preco}/>
+            preco={produto.preco}
+            onClick={this.props.onClick}/>
         })
 
 
@@ -73,8 +77,7 @@ export class SecaoProdutos extends React.Component{
                     <p>Ordenar</p>
                     <select name="ordena" 
                     id="ordena-produtos" 
-                    onChange={(e) => {this.setState({order: e.target.value})}}
-                    >
+                    onChange={this.props.onChange}>
                         <option value="decrescente">Mais caro</option>
                         <option value="crescente">Mais barato</option>
                     </select>

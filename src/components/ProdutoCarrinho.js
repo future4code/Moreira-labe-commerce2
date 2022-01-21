@@ -3,13 +3,21 @@ import styled from "styled-components"
 
 
 const ContainerFlex = styled.div`
-border : 1px solid green ;
+border-top: 1px solid lightgrey;
+border-bottom: 1px solid lightgrey;
 display: flex;
-flex-direction: row ;
 justify-content: space-between;
-width:100%;
+align-items: center;
+width: 99%;
+padding: 5px;
+button{
+        margin-right: 10px;
+    }
 p{
-    margin:5px;
+    font-weight: bold;
+}
+.descricao{
+    color: lightgrey;
 }
 `
 
@@ -20,12 +28,15 @@ export class ProdutoCarrinho extends React.Component {
      
         return (
             <ContainerFlex>
-            <p>{this.props.quantidade} x</p>
+            <p>{this.props.quantidade}</p>
+
+            <p>x</p>
             
-            <p>{this.props.produto}</p>
+            <p>{this.props.titulo}</p>
+
+            <p className="descricao">{this.props.descricao}</p>
              
             <button onClick={this.props.onClickButton}>Remover</button>
-
            
         </ContainerFlex>
         )
