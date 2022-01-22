@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Filtro from './components/Filtro';
 import  { Carrinho } from './components/Carrinho.js'
 import { SecaoProdutos } from './components/SecaoProdutos';
 import { SiteHeader } from './components/SiteHeader.js';
-import productList from "./data/produtos.json"
+// import ListaProdutos from "./data/produtos.json"
+
+import ListaProdutos from './components/ListaProdutos.json';
+
 
 const AppContainer = styled.div `
   text-align: center;
@@ -21,11 +25,15 @@ const AppContainer = styled.div `
 class App extends React.Component {
   
   state={ 
-    produtos: productList,
+    valorMinimo: 50,
+    valorMaximo: 200,
+    produtos: ListaProdutos,
     carrinho:[],
     order: "descrescente",
   }
   
+
+
 
   adicionaCarrinho = (e) => {
     const produtoId = Number(e.target.value)
@@ -59,13 +67,15 @@ class App extends React.Component {
     return (<>
       <SiteHeader/>
       <AppContainer>
+      <Filtro
+
+         />
         <SecaoProdutos 
           produtos={this.state.produtos} 
           order={this.state.order}
           onChange={(e) => {this.setState({order: e.target.value})}}
           onClick={this.adicionaCarrinho}
-          />
-        
+          /> 
           <Carrinho 
           produtosCarrinho={this.state.carrinho} 
           valorTotal={valorTotal}

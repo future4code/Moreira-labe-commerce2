@@ -36,7 +36,7 @@ export class Carrinho extends React.Component{
         return <ProdutoCarrinho
         id={produto.id}
         quantidade={produto.quantidade}
-        titulo={produto.titulo}
+        nome={produto.nome}
         descricao={produto.descricao}
         key={produto.id}
         onClick={this.props.onClick}
