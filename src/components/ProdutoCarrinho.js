@@ -37,7 +37,7 @@ export class ProdutoCarrinho extends React.Component {
 
             <p>x</p>
             
-            <p>{this.props.titulo}</p>
+            <p>{this.props.nome}</p>
 
             <p className="descricao">{this.props.descricao}</p>
              

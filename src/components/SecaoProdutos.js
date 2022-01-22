@@ -62,7 +62,7 @@ export class SecaoProdutos extends React.Component{
             produtoId={produto.id}
             img={produto.img} 
             gif={produto.gif}
-            titulo={produto.titulo} 
+            nome={produto.nome} 
             descricao={produto.descricao} 
             preco={produto.preco}
             onClick={this.props.onClick}/>

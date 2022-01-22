@@ -28,7 +28,7 @@ const ProdutoContainer = styled.div`
     .animated{
         display: none;
     }
-    .titulo{
+    .nome{
         font-size: medium;
         font-weight: 750;
         margin: 5px 10px 0px 10px;
@@ -87,7 +87,7 @@ export class CardProduto extends React.Component{
         return <ProdutoContainer>
             <img className="stactic" src={this.props.img} alt="Foto do Produto" />
             <img className="animated" src={this.props.gif} alt="Foto do Produto" />
-            <p className="titulo">{this.props.titulo}</p>
+            <p className="nome">{this.props.nome}</p>
             <p className="descricao">{this.props.descricao}</p>
             <div>
             <p className="preco">{`R$${this.props.preco}`}</p>
