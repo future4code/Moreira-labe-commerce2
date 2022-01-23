@@ -5,7 +5,7 @@ const Container = styled.div`
 margin: 5px;
 min-width: 15%;
 width: fit-content;
-border-radius: 2px;
+border-radius: 15px;
 display: flex;
 flex-direction:column ;
 justify-content: space-between;
@@ -26,8 +26,7 @@ box-shadow: 0px 5px 15px gray;
 
 const Titulo = styled.h2`
   text-align: center;
-  margin-bottom: 1em;
-  margin-left: 68npx;
+  margin: 10px;
 `;
 
 const InputTag = styled.div`

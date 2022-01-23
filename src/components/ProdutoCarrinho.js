@@ -34,15 +34,10 @@ export class ProdutoCarrinho extends React.Component {
         return (
             <ContainerFlex>
             <p>{this.props.quantidade}</p>
-
             <p>x</p>
-            
             <p>{this.props.nome}</p>
-
             <p className="descricao">{this.props.descricao}</p>
-             
             <button value={this.props.value} onClick={this.props.onClick}>Remover</button>
-           
         </ContainerFlex>
         )
 
