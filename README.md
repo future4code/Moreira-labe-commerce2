@@ -1,6 +1,6 @@
 ### AstroDev Store
 
-Um app de compras para desenvolvedores fãs do espaço.
+Um app de compras para devs fãs do espaço.
 
 ### O que funciona
 
