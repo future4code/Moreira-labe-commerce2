@@ -20,9 +20,9 @@ https://labeecommerce.surge.sh
 
 ### Desenvolvedores
 
-Atauan Lima (https://github.com/Atauan)
-Ewerton Francis (https://github.com/EwertonFS)
-Léo Rigotto (https://github.com/larrygotto)
+- Atauan Lima (https://github.com/Atauan)
+- Ewerton Francis (https://github.com/EwertonFS)
+- Léo Rigotto (https://github.com/larrygotto)
 
 ### Prints
 
