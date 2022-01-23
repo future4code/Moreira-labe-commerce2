@@ -57,6 +57,18 @@ class App extends React.Component {
     }
   };
 
+  removeCarrinho = (e) => {
+    let produtoId = Number(e.target.value)
+    const novoCarrinho = this.state.carrinho.filter((produto) => {
+      return produtoId !== produto.id
+    }).map((produto) => {
+      return produto
+    })
+    this.setState({
+      carrinho: novoCarrinho
+    })
+  }
+
 
   render(){
     
