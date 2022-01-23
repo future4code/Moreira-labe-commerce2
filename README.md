@@ -18,6 +18,12 @@ Um app de compras para desenvolvedores fãs do espaço.
 
 https://labeecommerce.surge.sh
 
+### Desenvolvedores
+
+Atauan Lima (https://github.com/Atauan)
+Ewerton Francis (https://github.com/EwertonFS)
+Léo Rigotto (https://github.com/larrygotto)
+
 ### Prints
 
 <img width="1440" alt="Captura de Tela 2022-01-23 às 12 01 44" src="https://user-images.githubusercontent.com/92735047/150684787-9c978c19-e202-4cd4-939f-668747e8508f.png">
